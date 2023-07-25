@@ -9,21 +9,6 @@ const onClickLeft = () => history.back()
 
 const form = ref()
 
-const rules = {
-  compName: [{ required: true, message: '请输入', trigger: 'blur' }],
-  userName: [{ required: true, message: '请输入', trigger: 'blur' }],
-  phone: [{ required: true, message: '请输入', trigger: 'blur' }],
-  projectName: [{ required: true, message: '请输入', trigger: 'blur' }],
-  projectAddr: [{ required: true, message: '请输入', trigger: 'blur' }],
-  useType: [{ required: true, message: '请选择', trigger: 'change' }],
-  projectScale: [{ required: true, message: '请输入', trigger: 'blur' }],
-  colourId: [{ required: true, message: '请选择', trigger: 'change' }],
-  projectStage: [{ required: true, message: '请选择', trigger: 'change' }],
-  constructionInfo: [{ required: true, message: '请输入', trigger: 'blur' }],
-  serviceContent: [{ required: true, message: '请输入', trigger: 'blur' }],
-  authorizeStartDate: [{ required: true, message: '请输入', trigger: 'blur' }],
-}
-
 const formModal = reactive({
   compName: '',
   userName: '',

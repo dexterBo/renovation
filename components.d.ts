@@ -13,18 +13,12 @@ declare module '@vue/runtime-core' {
     VanCell: typeof import('vant/es')['Cell']
     VanCellGroup: typeof import('vant/es')['CellGroup']
     VanConfigProvider: typeof import('vant/es')['ConfigProvider']
-    VanDatePicker: typeof import('vant/es')['DatePicker']
-    VanEmpty: typeof import('vant/es')['Empty']
     VanField: typeof import('vant/es')['Field']
     VanForm: typeof import('vant/es')['Form']
-    VanGrid: typeof import('vant/es')['Grid']
-    VanGridItem: typeof import('vant/es')['GridItem']
     VanImage: typeof import('vant/es')['Image']
     VanList: typeof import('vant/es')['List']
     VanNavBar: typeof import('vant/es')['NavBar']
     VanPicker: typeof import('vant/es')['Picker']
     VanPopup: typeof import('vant/es')['Popup']
-    VanSwitch: typeof import('vant/es')['Switch']
-    VanTag: typeof import('vant/es')['Tag']
   }
 }

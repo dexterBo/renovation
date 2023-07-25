@@ -12,7 +12,8 @@ const onClickLeft = () => history.back()
 
 <style lang="less" scoped>
 .iframe{
-  width: 100%;
+  margin-top: 50px;
+  width: 100vw;
   height: calc(100vh - 50px);
 }
 </style>
