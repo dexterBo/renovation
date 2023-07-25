@@ -12,6 +12,7 @@ import colorDetail from '@/views/color/detail.vue'
 import product from '@/views/product/index.vue'
 import security from '@/views/security/search.vue'
 import warranty from '@/views/warranty/search.vue'
+import pdf from '@/views/pdf.vue'
 NProgress.configure({ showSpinner: true, parent: '#app' })
 
 // 定义路由，每个路由都需要映射到一个组件
@@ -55,6 +56,11 @@ const routes = [
     path: '/warranty',
     name: 'warranty',
     component: warranty,
+  },
+  {
+    path: '/pdf',
+    name: 'pdf',
+    component: pdf,
   },
 ]
 

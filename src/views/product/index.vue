@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { showNotify } from 'vant'
+import { useRouter } from 'vue-router'
 import { queryProductPage } from '@/api/product'
+const router = useRouter()
 
 // back
 const onClickLeft = () => history.back()
@@ -35,6 +37,20 @@ const onLoad = async () => {
   }
 }
 
+const to = (item) => {
+  if (item.jumpType === 1) {
+    router.push({
+      name: 'pdf',
+      query: {
+        url: item.jumpUrl,
+      },
+    })
+  }
+  if (item.jumpType === 2) {
+    window.location.href = item.jumpUrl
+  }
+}
+
 watch(name, () => {
   size.value = 0
   onLoad()
@@ -61,7 +77,7 @@ watch(name, () => {
 
       <van-list v-model:loading="loading" :finished="finished" finished-text="没有更多了" @load="onLoad">
         <div class="list">
-          <div v-for="item in list" :key="item.id" class="card">
+          <div v-for="item in list" :key="item.id" class="card" @click="to(item)">
             <van-image width="90%" height="90%" :src="item?.prodImgUrl" />
             <div>
               {{ item.prodName }}
