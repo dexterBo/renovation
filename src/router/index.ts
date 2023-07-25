@@ -5,7 +5,13 @@ import 'nprogress/nprogress.css'
 
 // 导入路由组件
 import mian from '@/views/index.vue'
-import mock from '@/views/mock/index.vue'
+import color from '@/views/color/index.vue'
+import authorize from '@/views/authorize/index.vue'
+import authorizeSearch from '@/views/authorize/search.vue'
+import colorDetail from '@/views/color/detail.vue'
+import product from '@/views/product/index.vue'
+import security from '@/views/security/search.vue'
+import warranty from '@/views/warranty/search.vue'
 import charts from '@/views/charts/index.vue'
 NProgress.configure({ showSpinner: true, parent: '#app' })
 
@@ -17,9 +23,39 @@ const routes = [
     component: mian,
   },
   {
-    path: '/mock',
-    name: 'mock',
-    component: mock,
+    path: '/color',
+    name: 'color',
+    component: color,
+  },
+  {
+    path: '/product',
+    name: 'product',
+    component: product,
+  },
+  {
+    path: '/color/detail',
+    name: 'color-detail',
+    component: colorDetail,
+  },
+  {
+    path: '/authorize',
+    name: 'authorize',
+    component: authorize,
+  },
+  {
+    path: '/authorize/search',
+    name: 'authorize-search',
+    component: authorizeSearch,
+  },
+  {
+    path: '/security',
+    name: 'security',
+    component: security,
+  },
+  {
+    path: '/warranty',
+    name: 'warranty',
+    component: warranty,
   },
   {
     path: '/charts',

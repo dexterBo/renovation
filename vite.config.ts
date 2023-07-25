@@ -105,19 +105,17 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
         '~': path.join(__dirname, './src/assets'),
       },
     },
-
     server: {
-      host: true,
       port: 3000,
-      proxy: env.VITE_HTTP_MOCK === 'true'
-        ? undefined
-        : {
-            '/api': {
-              target: '',
-              ws: false,
-              changeOrigin: true,
-            },
-          },
+      host: '0.0.0.0',
+      open: true,
+      proxy: { // 代理配置
+        '/api/': {
+          target: 'http://119.91.216.77:8989/fdream-api/',
+          changeOrigin: true,
+        },
+        '/dev': 'https://www.fastmock.site/mock/48cab8545e64d93ff9ba66a87ad04f6b/',
+      },
     },
   }
 }

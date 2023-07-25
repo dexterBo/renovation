@@ -28,9 +28,11 @@ watch(checked, (val) => {
         </template>
       </van-cell>
 
-      <van-cell title="💿 mock 指南" to="mock" is-link />
+      <van-cell title="💿 product" to="product" is-link />
 
       <van-cell title="📊 charts 演示" to="charts" is-link />
+
+      <van-cell title="色卡展示" to="color" is-link />
 
       <van-cell center>
         <template #title>
