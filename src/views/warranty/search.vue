@@ -4,8 +4,6 @@ import { queryAuthorizeInfo } from '@/api/index'
 
 // back
 const onClickLeft = () => history.back()
-const code = ref('')
-
 const formModal = reactive({
   userName: '',
   addr: '',
@@ -61,10 +59,6 @@ const onSubmit = async () => {
           提交
         </van-button>
       </van-form>
-      <div>
-        如您现有授权函上<span style="color: red;">无授权码</span>
-        请发送邮件至123456@mail.com与我们联系
-      </div>
     </div>
   </div>
 </template>
