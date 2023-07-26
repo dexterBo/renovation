@@ -137,7 +137,7 @@ onMounted(() => {
       </div>
     </div>
     <div class="content">
-      <van-form ref="form" label-width="120px" class="form" @submit="onSubmit">
+      <van-form ref="form" label-align="top" label-width="140px" class="form" @submit="onSubmit">
         <van-field
           v-model="formModal.compName" label="公司名称" placeholder="请输入公司名称"
           :rules="[{ required: true, message: '请输入公司名称' }]" required
@@ -203,12 +203,12 @@ onMounted(() => {
 
         <van-field
           v-model="formModal.authorizeStartDate" is-link readonly name="calendar" label="授权开始日期"
-          :rules="[{ required: true, message: '请选择授权申请日期' }]" required
-          placeholder="点击选择日期" @click="showCalendar = true"
+          :rules="[{ required: true, message: '请选择授权申请日期' }]" required placeholder="点击选择日期"
+          @click="showCalendar = true"
         />
         <van-calendar v-model:show="showCalendar" @confirm="onConfirm" />
 
-        <van-button type="primary" round block native-type="submit">
+        <van-button class="button" type="primary" block native-type="submit">
           提交
         </van-button>
       </van-form>
@@ -250,74 +250,37 @@ onMounted(() => {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f9f9f9;
 
     .form {
       width: 100%;
     }
   }
 
-  .color_name {
-    margin-top: 20px;
-    font-size: 12px;
-    color: #333;
-  }
-
-  .canvas {
-    width: calc(100vw - 60px);
-    height: 300px;
-  }
-
-  .color_more {
-    margin-top: 10px;
-  }
-
-  .more {
-    font-weight: 650;
-  }
-
-  .input {
+  .button {
+    margin: auto;
     width: 300px;
+    margin-top: 15px;
     height: 40px;
-    padding: 0 20px;
-    background-color: rgba(51, 51, 51, 0);
-    box-sizing: border-box;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(204, 204, 204, 1);
-    border-radius: 5px;
-  }
-
-  input::placeholder {
-    color: rgb(153, 153, 153);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 13px;
   }
 }
 
-.list {
+:deep(.van-field__control) {
   width: 300px;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  gap: 15px;
+  height: 40px;
+  padding: 0 20px;
+  background-color: rgba(51, 51, 51, 0);
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(204, 204, 204, 1);
+  border-radius: 5px;
+}
 
-  .card {
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+:deep(.van-cell:after) {
+  display: none;
+}
 
-    width: 320px;
-    height: 202px;
-    background: inherit;
-    background-color: white;
-    border: none;
-    border-radius: 5px;
-  }
+:deep(.van-cell > .van-badge__wrapper) {
+  display: none;
 }
 </style>

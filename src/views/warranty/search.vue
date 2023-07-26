@@ -43,23 +43,12 @@ const onSubmit = async () => {
       </div>
     </div>
     <div class="content">
-      <van-form ref="form" label-width="120px" class="form" @submit="onSubmit">
-        <van-field
-          v-model="formModal.userName" label="姓名" placeholder="请输入姓名"
-          :rules="[{ required: true, message: '请输入姓名' }]" required
-        />
-        <van-field
-          v-model="formModal.phone" label="电话" placeholder="请输入联系人电话"
-          :rules="[{ required: true, message: '请输入联系人电话' }]" required
-        />
-        <van-field
-          v-model="formModal.addr" label="收货地址" placeholder="请输入收货地址"
-          :rules="[{ required: true, message: '请输入收货地址' }]" required
-        />
-        <van-button type="primary" round block native-type="submit">
-          提交
-        </van-button>
-      </van-form>
+      <input v-model="formModal.userName" class="input" placeholder="请输入姓名">
+      <input v-model="formModal.phone" class="input" placeholder="请输入联系人电话">
+      <input v-model="formModal.addr" class="input" placeholder="请输入收货地址">
+      <van-button class="button" type="primary" block native-type="submit" @click="onSubmit">
+        提交
+      </van-button>
     </div>
   </div>
 </template>
@@ -72,10 +61,11 @@ const onSubmit = async () => {
   background-color: white;
 
   .header {
-    padding: 10px 20px;
+    padding: 50px;
+    padding-bottom: 30px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 20px;
     background-color: white;
   }
@@ -98,33 +88,14 @@ const onSubmit = async () => {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f9f9f9;
 
     .form {
       width: 100%;
     }
   }
 
-  .color_name {
-    margin-top: 20px;
-    font-size: 12px;
-    color: #333;
-  }
-
-  .canvas {
-    width: calc(100vw - 60px);
-    height: 300px;
-  }
-
-  .color_more {
-    margin-top: 10px;
-  }
-
-  .more {
-    font-weight: 650;
-  }
-
   .input {
+    margin-top: 10px;
     width: 300px;
     height: 40px;
     padding: 0 20px;
@@ -143,29 +114,9 @@ const onSubmit = async () => {
     font-size: 13px;
   }
 }
-
-.list {
-  width: 300px;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  gap: 15px;
-
-  .card {
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
-    width: 320px;
-    height: 202px;
-    background: inherit;
-    background-color: white;
-    border: none;
-    border-radius: 5px;
+.button{
+    width: 300px;
+    margin-top: 15px;
+    height: 40px;
   }
-}
 </style>

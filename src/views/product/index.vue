@@ -79,7 +79,11 @@ watch(name, () => {
       <van-list v-model:loading="loading" :finished="finished" finished-text="没有更多了" @load="onLoad">
         <div class="list">
           <div v-for="item in list" :key="item.id" class="card" @click="to(item)">
-            <van-image width="90%" height="90%" :src="item?.prodImgUrl" />
+            <van-image
+              width="100%"
+              fit="cover"
+              :src="item?.prodImgUrl"
+            />
             <div>
               {{ item.prodName }}
             </div>
@@ -167,7 +171,7 @@ watch(name, () => {
 }
 
 .list {
-  width: 300px;
+  width: 100%;
   margin-top: 20px;
   display: flex;
   flex-direction: row;
@@ -183,7 +187,6 @@ watch(name, () => {
     justify-content: space-around;
 
     width: 320px;
-    height: 202px;
     background: inherit;
     background-color: white;
     border: none;

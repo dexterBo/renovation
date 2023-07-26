@@ -34,7 +34,11 @@ watchEffect(() => {
       {{ color?.colourInfo }}
     </div>
     <div class="color_card">
-      <van-image width="100%" height="100%" :src="color?.colourImgUrl" />
+      <van-image
+        width="100%"
+        fit="cover"
+        :src="color?.colourImgUrl"
+      />
     </div>
     <div class="color_more">
       <span class="more">更多色卡</span>
@@ -44,7 +48,11 @@ watchEffect(() => {
             {{ item.colourCode }}
           </div>
           <div>
-            <van-image width="130" height="150" :src="item.colourImgUrl" />
+            <van-image
+              width="100%"
+              fit="cover"
+              :src="item.colourImgUrl"
+            />
           </div>
           <div>
             {{ item.colourName }}
@@ -89,7 +97,7 @@ watchEffect(() => {
   }
 }
 
-.list {
+.list{
   width: 100%;
   margin-top: 20px;
   display: flex;
@@ -98,14 +106,13 @@ watchEffect(() => {
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 15px;
-
-  .card {
+  .card{
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 
-    width: 150px;
+    width: calc(50% - 7.5px);
     height: 215px;
     background: inherit;
     background-color: rgba(254, 254, 254, 1);

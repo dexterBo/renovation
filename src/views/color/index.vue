@@ -84,8 +84,8 @@ const handleDetail = (item: any) => {
             </div>
             <div>
               <van-image
-                width="130"
-                height="150"
+                width="100%"
+                fit="cover"
                 :src="item.colourImgUrl"
               />
             </div>
@@ -166,7 +166,7 @@ const handleDetail = (item: any) => {
     }
 }
 .list{
-  width: 300px;
+  width: 100%;
   margin-top: 20px;
   display: flex;
   flex-direction: row;
@@ -180,7 +180,7 @@ const handleDetail = (item: any) => {
     flex-direction: column;
     justify-content: space-around;
 
-    width: 140px;
+    width: calc(50% - 7.5px);
     height: 215px;
     background: inherit;
     background-color: rgba(254, 254, 254, 1);

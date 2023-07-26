@@ -44,12 +44,13 @@ const handleSearch = async () => {
       </div>
     </div>
     <div class="content">
-      <van-field v-model="code" label="授权码" placeholder="请输入授权码查询" />
-      <van-button type="primary" round block @click="handleSearch">
+      <input v-model="code" class="input" placeholder="请输入授权码查询">
+      <van-button type="primary" size="small" class="button" block @click="handleSearch">
         查询
       </van-button>
-      <div>
+      <div class="email">
         如您现有授权函上<span style="color: red;">无授权码</span>
+        <br>
         请发送邮件至123456@mail.com与我们联系
       </div>
     </div>
@@ -60,14 +61,14 @@ const handleSearch = async () => {
 .container {
   width: 100%;
   min-height: 100vh;
-  padding-top: 50px;
+  padding: 100px 50px;
   background-color: white;
 
   .header {
     padding: 10px 20px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 20px;
     background-color: white;
   }
@@ -90,34 +91,13 @@ const handleSearch = async () => {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f9f9f9;
 
     .form {
       width: 100%;
     }
   }
-
-  .color_name {
-    margin-top: 20px;
-    font-size: 12px;
-    color: #333;
-  }
-
-  .canvas {
-    width: calc(100vw - 60px);
-    height: 300px;
-  }
-
-  .color_more {
-    margin-top: 10px;
-  }
-
-  .more {
-    font-weight: 650;
-  }
-
   .input {
-    width: 300px;
+    width: 245px;
     height: 40px;
     padding: 0 20px;
     background-color: rgba(51, 51, 51, 0);
@@ -134,30 +114,13 @@ const handleSearch = async () => {
     font-style: normal;
     font-size: 13px;
   }
-}
-
-.list {
-  width: 300px;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  gap: 15px;
-
-  .card {
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
-    width: 320px;
-    height: 202px;
-    background: inherit;
-    background-color: white;
-    border: none;
-    border-radius: 5px;
+  .email{
+    margin-top: 10px;
+    font-size: 12px;
+  }
+  .button{
+    margin-top: 15px;
+    height: 40px;
   }
 }
 </style>
