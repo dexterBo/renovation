@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { showNotify } from 'vant'
 import { queryAuthorizeInfo } from '@/api/index'
+import logo from '@/assets/logo.jpg'
 
 // back
 const onClickLeft = () => history.back()
