@@ -7,13 +7,15 @@ const onClickLeft = () => history.back()
 
 <template>
   <van-nav-bar title="pdf预览" left-arrow fixed @click-left="onClickLeft" />
-  <iframe v-if="url" :src="url" class="iframe" />
+  <iframe v-if="url" :src="url" class="iframe">
+    当前浏览器不支持pdf文件预览. 请点击下载查看: <a :href="url">下载PDF</a>
+  </iframe>
 </template>
 
 <style lang="less" scoped>
 .iframe{
   margin-top: 50px;
   width: 100vw;
-  height: calc(100vh - 50px);
+  min-height: calc(100vh - 50px);
 }
 </style>
