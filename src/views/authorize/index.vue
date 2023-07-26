@@ -3,6 +3,7 @@ import { showNotify } from 'vant'
 import { onMounted, reactive } from 'vue'
 import { queryColourPage } from '@/api/color'
 import { addAuthorize } from '@/api/index'
+import logo from '@/assets/logo.jpg'
 
 // back
 const onClickLeft = () => history.back()
@@ -128,7 +129,7 @@ onMounted(() => {
 
   <div class="container">
     <div class="header">
-      <van-image width="80px" height="80px" :radius="20" src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg" />
+      <van-image width="80px" height="80px" :radius="20" :src="logo" />
       <div class="desc">
         <div class="title">
           授权申请
@@ -189,6 +190,11 @@ onMounted(() => {
         <van-popup v-model:show="projectStageVisible" position="bottom">
           <van-picker :columns="options2" @confirm="onConfirmProjectStage" @cancel="projectStageVisible = false" />
         </van-popup>
+
+        <van-field
+          v-model="formModal.constructionInfo" label="业主/设施/施工信息" placeholder="请输入业主/设施/施工信息"
+          :rules="[{ required: true, message: '请输入业主/设施/施工信息' }]" required
+        />
 
         <van-field
           v-model="formModal.serviceContent" label="项目服务内容" placeholder="请输入项目服务内容"

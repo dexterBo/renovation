@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { showNotify } from 'vant'
 import { queryProdCodeInfo } from '@/api/index'
+import logo from '@/assets/logo.jpg'
 
 // back
 const onClickLeft = () => history.back()
@@ -32,7 +33,7 @@ const handleSearch = async () => {
 
   <div class="container">
     <div class="header">
-      <van-image width="80px" height="80px" :radius="20" src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg" />
+      <van-image width="80px" height="80px" :radius="20" :src="logo" />
       <div class="desc">
         <div class="title">
           防伪查询

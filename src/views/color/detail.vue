@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
 import { getColorInfo } from '@/api/color'
+import logo from '@/assets/logo.jpg'
 
 const route = useRoute()
 const color = ref()
@@ -24,7 +25,7 @@ watchEffect(() => {
 
   <div class="container">
     <div class="logo">
-      <van-image width="80" height="80" :radius="20" src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg" />
+      <van-image width="80px" height="80px" :radius="20" :src="logo" />
     </div>
     <div class="color_name">
       {{ color?.colourCode }}

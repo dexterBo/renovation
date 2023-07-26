@@ -2,6 +2,7 @@
 import { showNotify } from 'vant'
 import { useRouter } from 'vue-router'
 import { queryProductPage } from '@/api/product'
+import logo from '@/assets/logo.jpg'
 const router = useRouter()
 
 // back
@@ -62,7 +63,7 @@ watch(name, () => {
 
   <div class="container">
     <div class="header">
-      <van-image width="80px" height="80px" :radius="20" src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg" />
+      <van-image width="80px" height="80px" :radius="20" :src="logo" />
       <div class="desc">
         <div class="title">
           产品资料

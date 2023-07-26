@@ -2,6 +2,7 @@
 import { showNotify } from 'vant'
 import { useRouter } from 'vue-router'
 import { queryColourPage } from '@/api/color'
+import logo from '@/assets/logo.jpg'
 
 // back
 const onClickLeft = () => history.back()
@@ -57,12 +58,7 @@ const handleDetail = (item: any) => {
 
   <div class="container">
     <div class="header">
-      <van-image
-        width="80px"
-        height="80px"
-        :radius="20"
-        src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg"
-      />
+      <van-image width="80px" height="80px" :radius="20" :src="logo" />
       <div class="desc">
         <div class="title">
           色卡展示

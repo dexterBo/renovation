@@ -42,7 +42,7 @@ watch(checked, (val) => {
   .logo {
     width: 150px;
     height: 150px;
-    background-image: url('@/assets/logo.png');
+    background-image: url('@/assets/logo.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;

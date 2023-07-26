@@ -31,7 +31,7 @@ const onSubmit = async () => {
 
   <div class="container">
     <div class="header">
-      <van-image width="80px" height="80px" :radius="20" src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg" />
+      <van-image width="80px" height="80px" :radius="20" :src="logo" />
       <div class="desc">
         <div class="title">
           质保查询
