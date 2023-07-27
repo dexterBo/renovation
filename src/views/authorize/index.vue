@@ -137,7 +137,7 @@ onMounted(() => {
       </div>
     </div>
     <div class="content">
-      <van-form ref="form" label-align="top" label-width="140px" class="form" @submit="onSubmit">
+      <van-form ref="form" label-align="top" class="form" @submit="onSubmit">
         <van-field
           v-model="formModal.compName" label="公司名称" placeholder="请输入公司名称"
           :rules="[{ required: true, message: '请输入公司名称' }]" required
@@ -246,12 +246,14 @@ onMounted(() => {
   }
 
   .content {
+    width: 100%;
     padding: 20px 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     .form {
+      padding-left: 6px;
       width: 100%;
     }
   }
@@ -260,6 +262,7 @@ onMounted(() => {
     margin: auto;
     width: 300px;
     margin-top: 15px;
+    margin-left: 16px;
     height: 40px;
   }
 }
