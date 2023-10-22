@@ -12,6 +12,8 @@ import colorDetail from '@/views/color/detail.vue'
 import product from '@/views/product/index.vue'
 import security from '@/views/security/search.vue'
 import warranty from '@/views/warranty/search.vue'
+import warrantyDetail from '@/views/warranty/detail.vue'
+import warrantyList from '@/views/warranty/list.vue'
 import pdf from '@/views/pdf.vue'
 NProgress.configure({ showSpinner: true, parent: '#app' })
 
@@ -56,6 +58,16 @@ const routes = [
     path: '/warranty',
     name: 'warranty',
     component: warranty,
+  },
+  {
+    path: '/warranty/list',
+    name: 'warrantyList',
+    component: warrantyList,
+  },
+  {
+    path: '/warranty/detail',
+    name: 'warrantyDetail',
+    component: warrantyDetail,
   },
   {
     path: '/pdf',

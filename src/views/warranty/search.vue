@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { showNotify } from 'vant'
+import { useRouter } from 'vue-router'
 import { queryAuthorizeInfo } from '@/api/index'
 import logo from '@/assets/logo.jpg'
+const router = useRouter()
 
 // back
 const onClickLeft = () => history.back()
@@ -24,6 +26,12 @@ const onSubmit = async () => {
       message: '无授权码',
     })
   }
+}
+
+const handleSearchWarranty = () => {
+  router.push({
+    name: 'warrantyList',
+  })
 }
 </script>
 
@@ -49,6 +57,9 @@ const onSubmit = async () => {
       <van-button class="button" type="primary" block native-type="submit" @click="onSubmit">
         提交
       </van-button>
+      <div class="my" @click="handleSearchWarranty">
+        我的质保卡
+      </div>
     </div>
   </div>
 </template>
@@ -118,5 +129,10 @@ const onSubmit = async () => {
     width: 300px;
     margin-top: 15px;
     height: 40px;
+  }
+  .my{
+    margin-top: 20px;
+    font-size: 14px;
+    color: #444;
   }
 </style>
