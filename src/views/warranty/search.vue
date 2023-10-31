@@ -32,11 +32,11 @@ const onSubmit = async () => {
   }
 }
 
-const handleSearchWarranty = () => {
-  router.push({
-    name: 'warrantyList',
-  })
-}
+// const handleSearchWarranty = () => {
+//   router.push({
+//     name: 'warrantyList',
+//   })
+// }
 </script>
 
 <template>
