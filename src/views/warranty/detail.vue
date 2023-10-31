@@ -9,14 +9,14 @@ const current = computed(() => route.query)
   <van-nav-bar title="质保卡详情" left-arrow fixed @click-left="onClickLeft" />
   <div class="content">
     <div class="info">
-      <div>{{ current.desc }}</div>
-      <div>XX省XX市XX县XX街道XX号</div>
-      <div>{{ current.date }}</div>
-      <div>1600×800×560</div>
-      <div>哑光白</div>
-      <div>{{ current.name }}</div>
-      <div>佛山居然之家创品高旗舰店</div>
-      <div>12345678900</div>
+      <div>{{ current.prodCode }}</div>
+      <div>{{ current.custAddr }}</div>
+      <div>{{ current.buyDate }}</div>
+      <div>{{ current.size }}</div>
+      <div>{{ current.colour }}</div>
+      <div>{{ current.material }}</div>
+      <div>{{ current.dealer }}</div>
+      <div>{{ current.phone }}</div>
     </div>
   </div>
 </template>

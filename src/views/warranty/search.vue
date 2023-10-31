@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { showNotify } from 'vant'
 import { useRouter } from 'vue-router'
-import { queryAuthorizeInfo } from '@/api/index'
+import { queryWarrantyInfo } from '@/api/index'
 import logo from '@/assets/logo.jpg'
 const router = useRouter()
 
@@ -14,11 +14,15 @@ const formModal = reactive({
 })
 
 const onSubmit = async () => {
-  const result = await queryAuthorizeInfo(formModal)
+  const result = await queryWarrantyInfo(formModal)
   if (result.code === 0) {
     showNotify({
       type: 'success',
       message: '有效授权码',
+    })
+    router.push({
+      name: 'warrantyDetail',
+      query: result.cust,
     })
   } else {
     showNotify({
