@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
-import warranty from './warranty.jpg'
 const router = useRouter()
 const onClickLeft = () => history.back()
 const list = ref([{
