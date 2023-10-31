@@ -61,9 +61,9 @@ const handleSearchWarranty = () => {
       <van-button class="button" type="primary" block native-type="submit" @click="onSubmit">
         提交
       </van-button>
-      <div class="my" @click="handleSearchWarranty">
+      <!-- <div class="my" @click="handleSearchWarranty">
         我的质保卡
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
